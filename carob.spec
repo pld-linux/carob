@@ -67,9 +67,10 @@ Statyczna biblioteka carob.
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}}/carob
-install libcarob.so* $RPM_BUILD_ROOT%{_libdir}/carob
+install libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob
 install libcarob.a $RPM_BUILD_ROOT%{_libdir}
 install include/*.hpp $RPM_BUILD_ROOT%{_includedir}/carob
+ln -s %{_libdir}/carob/libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob/libcarob.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -85,9 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/carob/libcarob.so
 %{_includedir}/carob
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/carob/libcarob.so
 %{_libdir}/libcarob.a
