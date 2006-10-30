@@ -1,8 +1,8 @@
+%define	_ver	%(echo %{version} |tr . _)
 Summary:	Carob library
 Summary(pl):	Biblioteka carob
 Name:		carob
 Version:	0.6.2
-%define	_ver	%(echo %{version} |tr . _)
 Release:	0.1
 License:	Apache License v2.0
 Group:		Development/Libraries
@@ -70,7 +70,7 @@ install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}}/carob
 install libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob
 install libcarob.a $RPM_BUILD_ROOT%{_libdir}
 install include/*.hpp $RPM_BUILD_ROOT%{_includedir}/carob
-ln -s %{_libdir}/carob/libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob/libcarob.so
+ln -s libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob/libcarob.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
