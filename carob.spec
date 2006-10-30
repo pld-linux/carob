@@ -2,7 +2,7 @@ Summary:	Carob library
 Summary(pl):	Biblioteka carob
 Name:		carob
 Version:	0.6.2
-%define	_ver	%(echo %version |tr . _)
+%define	_ver	%(echo %{version} |tr . _)
 Release:	0.1
 License:	Apache License v2.0
 Group:		Development/Libraries
