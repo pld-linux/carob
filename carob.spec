@@ -3,9 +3,9 @@ Summary:	Carob library
 Summary(pl):	Biblioteka carob
 Name:		carob
 Version:	0.6.2
-Release:	0.1
+Release:	0.2
 License:	Apache License v2.0
-Group:		Development/Libraries
+Group:		Libraries
 Source0:	https://forge.continuent.org/frs/download.php/182/%{name}-r%{_ver}.tar.gz
 # Source0-md5:	6969f74fa9f4c19c434b68d29590eb3a
 URL:		http://carob.continuent.org/HomePage
@@ -20,15 +20,6 @@ Carob's base is a C++ port of the JDBC driver code. It offers to
 developpers the same access as in Java. Connections, Requests,
 ResultSets and all necessary C++ classes can be used transparently and
 directly in any C++ enabled application.
-
-%package libs
-Summary:	-
-Summary(pl):	-
-Group:		Libraries
-
-%description libs
-
-%description libs -l pl
 
 %package devel
 Summary:	Header files for carob library
@@ -61,16 +52,16 @@ Statyczna biblioteka carob.
 %{__make} \
 	CXX="%{__cxx}" \
 	CXXFLAGS="%{rpmcflags} -fPIC" \
-	LDFLAGS="%{rpmldflags}"
+	LDFLAGS="%{rpmldflags} -lpthread"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}}/carob
-install libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob
+install -d $RPM_BUILD_ROOT{%{_includedir}/carob,%{_libdir}}
+install libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}
 install libcarob.a $RPM_BUILD_ROOT%{_libdir}
 install include/*.hpp $RPM_BUILD_ROOT%{_includedir}/carob
-ln -s libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/carob/libcarob.so
+ln -s libcarob.so.1 $RPM_BUILD_ROOT%{_libdir}/libcarob.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,12 +72,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%dir %{_libdir}/carob
-%attr(755,root,root) %{_libdir}/carob/libcarob.so.1
+%attr(755,root,root) %{_libdir}/libcarob.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/carob/libcarob.so
+%attr(755,root,root) %{_libdir}/libcarob.so
 %{_includedir}/carob
 
 %files static
