@@ -21,6 +21,15 @@ developpers the same access as in Java. Connections, Requests,
 ResultSets and all necessary C++ classes can be used transparently and
 directly in any C++ enabled application.
 
+%description -l pl
+Przeniesienie technologii Sequoia do ¶wiata C/C++.
+
+Podstaw± caroba jest port C++ kodu sterownika JDBC. Oferuje
+programistom ten sam sposób dostêpu co w Javie. Po³±czenia, ¿±dania,
+zbiory wyników (Connection, Request, ResultSet) i wszystkie potrzebne
+klasy C++ mog± byæ u¿ywane w sposób przezroczysty i bezpo¶redni w
+dowolnej aplikacji C++.
+
 %package devel
 Summary:	Header files for carob library
 Summary(pl):	Pliki nag³ówkowe biblioteki carob
