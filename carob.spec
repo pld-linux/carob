@@ -1,6 +1,6 @@
 %define	_ver	%(echo %{version} |tr . _)
 Summary:	Carob library
-Summary(pl.UTF-8):   Biblioteka carob
+Summary(pl.UTF-8):	Biblioteka carob
 Name:		carob
 Version:	0.6.2
 Release:	0.2
@@ -32,7 +32,7 @@ dowolnej aplikacji C++.
 
 %package devel
 Summary:	Header files for carob library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki carob
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki carob
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -44,7 +44,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki carob.
 
 %package static
 Summary:	Static carob library
-Summary(pl.UTF-8):   Statyczna biblioteka carob
+Summary(pl.UTF-8):	Statyczna biblioteka carob
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
