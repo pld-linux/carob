@@ -1,6 +1,6 @@
 %define	_ver	%(echo %{version} |tr . _)
 Summary:	Carob library
-Summary(pl):	Biblioteka carob
+Summary(pl.UTF-8):   Biblioteka carob
 Name:		carob
 Version:	0.6.2
 Release:	0.2
@@ -21,37 +21,37 @@ developpers the same access as in Java. Connections, Requests,
 ResultSets and all necessary C++ classes can be used transparently and
 directly in any C++ enabled application.
 
-%description -l pl
-Przeniesienie technologii Sequoia do ¶wiata C/C++.
+%description -l pl.UTF-8
+Przeniesienie technologii Sequoia do Å›wiata C/C++.
 
-Podstaw± caroba jest port C++ kodu sterownika JDBC. Oferuje
-programistom ten sam sposób dostêpu co w Javie. Po³±czenia, ¿±dania,
-zbiory wyników (Connection, Request, ResultSet) i wszystkie potrzebne
-klasy C++ mog± byæ u¿ywane w sposób przezroczysty i bezpo¶redni w
+PodstawÄ… caroba jest port C++ kodu sterownika JDBC. Oferuje
+programistom ten sam sposÃ³b dostÄ™pu co w Javie. PoÅ‚Ä…czenia, Å¼Ä…dania,
+zbiory wynikÃ³w (Connection, Request, ResultSet) i wszystkie potrzebne
+klasy C++ mogÄ… byÄ‡ uÅ¼ywane w sposÃ³b przezroczysty i bezpoÅ›redni w
 dowolnej aplikacji C++.
 
 %package devel
 Summary:	Header files for carob library
-Summary(pl):	Pliki nag³ówkowe biblioteki carob
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki carob
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This is the package containing the header files for carob library.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe biblioteki carob.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe biblioteki carob.
 
 %package static
 Summary:	Static carob library
-Summary(pl):	Statyczna biblioteka carob
+Summary(pl.UTF-8):   Statyczna biblioteka carob
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static carob library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka carob.
 
 %prep
