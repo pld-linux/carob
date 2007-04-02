@@ -2,12 +2,12 @@
 Summary:	Carob library
 Summary(pl.UTF-8):	Biblioteka carob
 Name:		carob
-Version:	0.6.2
-Release:	0.2
+Version:	0.7.3
+Release:	1
 License:	Apache License v2.0
 Group:		Libraries
-Source0:	https://forge.continuent.org/frs/download.php/182/%{name}-r%{_ver}.tar.gz
-# Source0-md5:	6969f74fa9f4c19c434b68d29590eb3a
+Source0:	https://forge.continuent.org/frs/download.php/255/%{name}-r%{_ver}.tar.gz
+# Source0-md5:	f1023a5185bcc08d49d80564126a8592
 URL:		http://carob.continuent.org/HomePage
 BuildRequires:	gmp-devel
 BuildRequires:	libstdc++-devel
