@@ -3,7 +3,7 @@ Summary:	Carob library
 Summary(pl.UTF-8):	Biblioteka carob
 Name:		carob
 Version:	0.7.3
-Release:	1
+Release:	2
 License:	Apache License v2.0
 Group:		Libraries
 Source0:	https://forge.continuent.org/frs/download.php/255/%{name}-r%{_ver}.tar.gz
